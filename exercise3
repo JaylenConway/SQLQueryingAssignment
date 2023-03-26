@@ -1,0 +1,5 @@
+SELECT s.first_name AS student_first_name, s.last_name AS student_last_name, 
+       i.first_name AS advisor_first_name, i.last_name AS advisor_last_name
+FROM student AS s
+INNER JOIN instructor AS i ON s.advisor_id = i.instructor_id
+WHERE s.advisor_id IS NOT NULL;
